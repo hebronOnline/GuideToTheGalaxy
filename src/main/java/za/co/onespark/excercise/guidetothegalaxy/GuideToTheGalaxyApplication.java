@@ -8,6 +8,7 @@ public class GuideToTheGalaxyApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GuideToTheGalaxyApplication.class, args);
+		System.out.println("Hello world");
 	}
 
 }
