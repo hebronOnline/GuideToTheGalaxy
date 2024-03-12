@@ -1,6 +1,8 @@
 package za.co.onespark.excercise.guidetothegalaxy.utils;
 
 
+import za.co.onespark.excercise.guidetothegalaxy.common.models.InterGalacticConversionData;
+
 public interface InputDataParser {
-    Object parseData(String [] fileContent);
+    InterGalacticConversionData parseData(String [] fileContent);
 }
