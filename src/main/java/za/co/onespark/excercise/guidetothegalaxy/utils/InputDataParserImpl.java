@@ -61,11 +61,11 @@ public class InputDataParserImpl implements InputDataParser {
                     }
                 }
 
-                int galacticCredits = getGalacticCredits(galacticUnitsToCreditsLineArray);
+                double galacticCredits = getGalacticCredits(galacticUnitsToCreditsLineArray);
 
-                int units = romanNumeralConverter.convertToNumber(romanConversion.toString());
-                Metal metal = Metal.valueOf(galacticUnitsToCreditsLineArray[metalIndex]);
-                Double creditsValuePerGalacticUnit = (double) (galacticCredits / units);
+                double units = romanNumeralConverter.convertToNumber(romanConversion.toString());
+                Metal metal = Metal.fromName(galacticUnitsToCreditsLineArray[metalIndex]);
+                Double creditsValuePerGalacticUnit = galacticCredits / units;
 
                 unitPerMetalCreditConversionMapping.put(metal, creditsValuePerGalacticUnit);
             }
