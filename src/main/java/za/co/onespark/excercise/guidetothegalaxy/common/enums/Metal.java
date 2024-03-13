@@ -21,6 +21,6 @@ public enum Metal {
                 return metal;
             }
         }
-        throw new IllegalArgumentException("Value for " + name + " not found");
+        throw new IllegalArgumentException("Invalid metal provided :: " + name);
     }
 }

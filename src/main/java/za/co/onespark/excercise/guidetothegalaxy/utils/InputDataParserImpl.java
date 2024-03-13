@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 import za.co.onespark.excercise.guidetothegalaxy.common.enums.Metal;
 import za.co.onespark.excercise.guidetothegalaxy.common.enums.RomanNumeral;
 import za.co.onespark.excercise.guidetothegalaxy.common.models.InterGalacticConversionData;
-import za.co.onespark.excercise.guidetothegalaxy.exceptions.InvalidRomanNumeralException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,7 +40,7 @@ public class InputDataParserImpl implements InputDataParser {
                             galacticToRomanArray[0],
                             RomanNumeral.valueOf(galacticToRomanArray[2])
                     );
-                } catch (InvalidRomanNumeralException e) {
+                } catch (IllegalArgumentException e) {
                     answers.add("Invalid Roman numeral provided: " + galacticToRomanArray[2]);
                 }
             }

@@ -68,7 +68,6 @@ public class ProcessTransactions {
         return answer;
     }
 
-
     private String processHowMuch(String question, InterGalacticConversionData data) {
         Map<String, RomanNumeral> galacticToRomanNumeralMap = data.getGalacticToRomanNumeralsMap();
         String[] galacticUnits = question.replace(HOW_MUCH, QUOTATIONS).split(SPACE);
