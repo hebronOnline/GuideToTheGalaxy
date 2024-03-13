@@ -11,8 +11,16 @@ public enum Metal {
 
     private final String name;
 
-    public boolean containsValidMetal(String metal) {
-        Metal.valueOf(metal);
-        return true;
+    public String getName() {
+        return this.name;
+    }
+
+    public static Metal fromName(String name) {
+        for(Metal metal : values()) {
+            if(metal.getName().equals(name)){
+                return metal;
+            }
+        }
+        throw new IllegalArgumentException("Invalid metal provided :: " + name);
     }
 }

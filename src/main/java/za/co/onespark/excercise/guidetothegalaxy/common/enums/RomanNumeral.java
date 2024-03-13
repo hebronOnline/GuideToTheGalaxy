@@ -30,9 +30,9 @@ public enum RomanNumeral {
             return false;
         }
 
-        int numeralPosition = this.ordinal();
+        int thisNumeralPosition = this.ordinal();
         int otherNumeralPosition = otherNumeral.ordinal();
 
-        return (numeralPosition == otherNumeralPosition - 1 ||  numeralPosition == otherNumeralPosition - 2);
+        return (thisNumeralPosition == otherNumeralPosition - 1 ||  thisNumeralPosition == otherNumeralPosition - 2);
     }
 }
